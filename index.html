@@ -32,7 +32,7 @@
 </ul>
     </nav>
     <div class="header-text">
-        <!-- <p>IT Undergraduater</p> -->
+        <p>IT Undergraduate </p>
         <h1>
             Hi, I'm <span>Malinsha </span><br>Vithanage From Sri Lanka.
         </h1>
@@ -63,23 +63,58 @@
                    <br><br> Thank you for visiting, and I look forward to connecting with you!</p>
            
             <div class="tab-titles">
-                <p class="tab-links active-link">Skills</p>
-                <p class="tab-links">Experience</p>
-                <p class="tab-links">Education</p>
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <!-- <p class="tab-links" onclick="opentab('experience')">Experience</p> -->
+                <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
-            <div class="tab-contents">
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                   <li><span>Web Development</span><br> Web App Development</li>
+                    <li><span>App Development</span><br> Building Android/ios apps</li>
+                    <li><span>UI/UX</span><br> Designing Web App interfaces</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                     <li><span>2021-Current</span><br> IT Undergraduate at Faculty of Information Technology at Universityof Moratuwa<br> </li>
+                    <li><span>2019-2020</span><br>Diploma in Comprehensive Master Java Developer at IJSE </li>
+                    <li><span>2005-2019</span><br>Student at Southlands College Galle</li>
+                </ul>
+            </div>
+            <!-- <div class="tab-contents" id="experience">
                 <ul>
                    
                     <li><span>Web Development</span><br> Web App Development</li>
                     <li><span>App Development</span><br> Building Android/ios apps</li>
                     <li><span>UI/UX</span><br> Designing Web App interfaces</li>
                 </ul>
-            </div>
+            </div> -->
             </div>
             </div>
             </div> 
             </div>
-   
-
+   <!-- ---------------Services------------------ -->
+   <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            
+        </div>
+    </div>
+   </div>
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 </body>
 </html>
