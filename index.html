@@ -13,7 +13,7 @@
 <div class="container">
     <nav>
         <!-- <img src="images/logo.png" class="logo"> -->
-<ul>
+<ul id="sidemenu">
     <li>
         <a href="#"> Home</a>
     </li>
@@ -29,7 +29,9 @@
     <li>
         <a href="#"> Contact</a>
     </li> 
+    <i class="fas fa-times" onclick="closemenu()"></i>
 </ul>
+<i class="fas fa-bars" onclick="openmenu()"></i>
     </nav>
     <div class="header-text">
         <p>IT Undergraduate </p>
@@ -155,6 +157,37 @@
     </div>
 </div>
 
+<!-- ---------------------contact--------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                
+                <p><i class="fa-solid fa-paper-plane"></i> malinshakv@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/malinsha-vithanage/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/MaliVitha"><i class="fa-brands fa-github"></i></a>
+                   
+                </div>
+                <!-- <a href="images/myCv.pdf" download class="btn btn2">DownLoad CV</a> -->
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email"required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit"class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Malinsha</p>
+        
+    </div>
+</div>
+
 <script>
     var tablinks=document.getElementsByClassName("tab-links");
     var tabcontents=document.getElementsByClassName("tab-contents");
@@ -167,6 +200,16 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
     }
 </script>
 </body>
